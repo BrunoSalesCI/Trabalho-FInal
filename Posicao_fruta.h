@@ -8,13 +8,14 @@ using namespace std;
 class Posicao(){
 
 protected:
-	const int largura = 300;
-	const int altura = 200;
-	int x_fruta, y_fruta;
+	const float largura = 300;
+	const float altura = 200;
+	float x_fruta, y_fruta;
 
 public:
 	Posicao();
 	virtual ~Posicao();
 	GerarPosicao(const int, const int);
+	Exibe(float, float);
 };
 #endif
