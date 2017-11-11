@@ -1,0 +1,27 @@
+Coisas para saber em OpenCV
+
+
+- Em geral, a maior parte das funcionalidades da biblioteca é definida no arquivo de cabeçalho opencv.hpp. 
+- Nesse arquivo, são definidos tipos básicos da biblioteca, bem como os protótipos de várias funções usadas para tratamento de imagens. Ele agrega as definições de funções que são usadas para entrada e saída de dados, criação de e manipulação de janelas e seus eventos, além de widgets para permitir interação com o usuário.
+
+
+- Mat image : A interface em C++ do OpenCV provê um tipo básico de estrutura para armazenar imagems: a classe Mat. Dependendo da forma como é criado, um objeto dessa classe é capaz de armazenar imagens (matrizes) de diversos tipos diferentes, tais como inteiros, floats, doubles, etc.
+
+	
+
+		####	image= imread("bolhas.png",CV_LOAD_IMAGE_GRAYSCALE);
+			if(!image.data)
+			  cout << "nao abriu bolhas.png" << endl;    ####
+
+     - Imread() : essa função recebe dois parâmetros: o primeiro é o caminho para o arquivo a ser aberto e o segundo é a forma como a imagem será interpretada.Neste casso, independentemente do formato da imagem presente no arquivo bolhas.png, ela será imediatamente transformada em uma imagem em tons de cinza antes de ser guardada no objeto image(grayscale). Para ter uma coloração seguindo os ranges da RGB, escreva CV_LOAD_IMAGE_COLOR.
+
+		*As cores em um pixel são ordenadas na sequência B→G→R (Azul, Verde, Vermelho), podendo os pixels da matriz serem interpretados como um conjunto de elementos do tipo Vec3b.
+			val[0] = 0;   //B
+			val[1] = 0;   //G
+			val[2] = 255; //R*
+
+
+
+
+
+
